@@ -1,0 +1,50 @@
+:root {
+    --berry: #ec96a4;
+    --berryFuerte: #fa7389;
+    --branch: #5d535e;
+    --yellowFeathers: #DFE166;
+    --lavanderGray: #9a9eab;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuenteNombre: 'Akaya Telivigala', cursive;
+    --fuenteTexto: 'Noto Sans JP', sans-serif;
+    --fuenteTipoDeLetra: 'Indie Flower', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* GLOBALES */
+
+body {
+    background-color: var(--yellowFeathers);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.nombre {
+    font-size: 6rem;
+    font-family: var(--fuenteNombre);
+    color: var(--blanco);
+}
+
+.texto {
+    font-size: 3rem;
+    font-family: var(--fuenteTexto);
+    color: var(--branch);
+}
+
+.texto_tipoletra {
+    font-size: 9rem;
+    font-family: var(--fuenteTipoDeLetra);
+    color: var(--berryFuerte)
+}
