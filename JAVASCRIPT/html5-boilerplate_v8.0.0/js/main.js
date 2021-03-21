@@ -34,3 +34,28 @@ var main = function(){
 main();
 
 
+/*//Diferentes mensajes
+console.log(123);
+console.log("123");
+console.table([1,2,3,4]);
+console.warn("ten cuidado");
+console.error("Existe un error en tu programa");
+*/
+
+//console.clear();
+
+/*//Pruebas de rendimiento
+console.time("sumaArreglo");
+    let numbers = [5,6,7,3,2,5,5,6,3,2,5,6,32,2,353,43,2,2,3423,3];
+    let result = 0;
+
+    numbers.forEach(function(num){
+        result += num;
+
+    });
+
+console.log(result);
+console.timeEnd("sumaArreglo");
+*/
+
+
