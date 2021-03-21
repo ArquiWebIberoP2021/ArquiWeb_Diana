@@ -548,4 +548,37 @@ console.log(`Èl valor de la variable música fuera del if: ${musica2}`)
 ->>*/
 
 //------------------- Object destructuring: la forma en como se extraen valores de  un objeto
+const cliente = {
+    nombre : "Diana",
+    tipo: "Premium",
+    datos: {
+        ubicacion:{
+            ciudad: "México",
+            pais: "Méxicoo"
+    },
+    cuenta: {
+        desde: "11-04-2020",
+        saldo: 5000
+    }
+},
+    gustos: {
+        deportes: ["Bicicleta", "Gym","Baile"]
+    }
+};
 
+console.log(cliente);
+
+//Anterior
+const nombreCliente = cliente.nombre, 
+      tipoCliente = cliente.tipo;
+
+console.log(nombreCliente);
+console.log(tipoCliente);
+
+//Ahora con Object destructuring
+let {nombre,tipo,datos:{ubicacion:{ciudad}},gustos} = cliente;
+
+console.log(nombre);
+console.log(tipo);
+console.log(ciudad);
+console.log(gustos);
