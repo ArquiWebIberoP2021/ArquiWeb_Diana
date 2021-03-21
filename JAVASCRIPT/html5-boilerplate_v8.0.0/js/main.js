@@ -329,4 +329,22 @@ suma(100,150);
     console.log(`Me invoco automáticamente y estoy trabajando con ${lenguaje}.`);
 })("JavaScript"); //Lo que le quiero enviar
 
+console.clear();
 
+//------------------- Métodos de propiedad (Función dentro de un objeto) --> Metodos en OO
+const musica = {
+
+    reproducir: function(cancion){
+        console.log(`Reproduciendo la canción: ${cancion}`);
+    },
+
+    pausar: function() {
+        console.log("Pausa.....");
+    }
+
+}
+
+musica.reproducir("10,000 hours");
+musica.reproducir("Monster");
+musica.reproducir("Justice");
+musica.pausar();
