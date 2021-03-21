@@ -321,3 +321,12 @@ suma(100,150);
 
 //Para optimizar espacio: https://javascript-minifier.com/;
 
+
+
+//------------------- IIFE FUNCIONES QUE SE INVOCAN AUTOMATICAMENTE
+
+(function(lenguaje){ //Variables a trabajar
+    console.log(`Me invoco automáticamente y estoy trabajando con ${lenguaje}.`);
+})("JavaScript"); //Lo que le quiero enviar
+
+
