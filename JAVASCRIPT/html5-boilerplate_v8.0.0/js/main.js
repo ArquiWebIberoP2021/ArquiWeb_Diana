@@ -1,4 +1,5 @@
 
+/*
 console.log("Mensaje a la consola");
 //alert("Hola mundo");
 
@@ -34,13 +35,13 @@ var main = function () {
 main();
 
 
-/*//Diferentes mensajes
+//Diferentes mensajes
 console.log(123);
 console.log("123");
 console.table([1,2,3,4]);
 console.warn("ten cuidado");
 console.error("Existe un error en tu programa");
-*/
+
 
 //console.clear();
 
@@ -83,7 +84,32 @@ const PI = 3.1416;
 console.log(PI);
 
 //Instanciando al objeto
-const menuElemento = document.getElementById("liElemento1")
+const menuElemento = document.getElementById("liElemento1");
 
-///console.log(menuElemento.innerText);
-//console.log(menuElemento.innerHTML);
+console.log(menuElemento.innerText);
+console.log(menuElemento.innerHTML);
+
+*/
+
+//Manejo de cadenas
+let nombre;
+nombre = "Diana";
+
+let esBueno = "Me gusta ";
+let lenguaje = "JavaScript";
+
+console.log(esBueno + lenguaje);
+
+let grupo = "Justin Bieber";
+let cancion = "Die for you";
+
+console.log(grupo.length);
+
+grupo = grupo.concat(" ",": es muy bueno"," ","Y me gusta mucho");
+grupo = grupo.toUpperCase();
+
+console.log(grupo);
+
+let separar = grupo.split(" ");
+console.log(separar);
+console.table(separar);
