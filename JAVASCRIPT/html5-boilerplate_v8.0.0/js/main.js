@@ -145,6 +145,17 @@ console.log(parseFloat(folios));
 console.log(parseInt("A",16));
 console.log(parseInt("111010101",2));
 
+//Otros métodos
+
+//toFixed(); -> El número de digitos a utilizar
+let test = 128.234232;
+console.log(test);
+console.log(test.toFixed(3));
+
+//toString();
+console.log(test.toString());
+//date();
+console.log(Date());
 
 
 
