@@ -1,5 +1,5 @@
 
-/*
+
 console.log("Mensaje a la consola");
 //alert("Hola mundo");
 
@@ -12,7 +12,7 @@ var esDivertido = true;
 console.log(mensaje);
 console.log(pi);
 console.log(count);
-console.log(esDivertido); 
+console.log(esDivertido);
 
 
 
@@ -38,7 +38,7 @@ main();
 //Diferentes mensajes
 console.log(123);
 console.log("123");
-console.table([1,2,3,4]);
+console.table([1, 2, 3, 4]);
 console.warn("ten cuidado");
 console.error("Existe un error en tu programa");
 
@@ -47,13 +47,13 @@ console.error("Existe un error en tu programa");
 
 //Pruebas de rendimiento
 console.time("sumaArreglo");
-    let numbers = [5,6,7,3,2,5,5,6,3,2,5,6,32,2,353,43,2,2,3423,3];
-    let result = 0;
+let numbers = [5, 6, 7, 3, 2, 5, 5, 6, 3, 2, 5, 6, 32, 2, 353, 43, 2, 2, 3423, 3];
+let result = 0;
 
-    numbers.forEach(function(num){
-        result += num;
+numbers.forEach(function (num) {
+    result += num;
 
-    });
+});
 
 console.log(result);
 console.timeEnd("sumaArreglo");
@@ -86,14 +86,16 @@ console.log(PI);
 //Instanciando al objeto
 const menuElemento = document.getElementById("liElemento1");
 
-console.log(menuElemento.innerText);
-console.log(menuElemento.innerHTML);
+//console.log(menuElemento.innerText);
+//console.log(menuElemento.innerHTML);
 
-*/
+
+
+//use : https://www.w3schools.com/jsref/jsref_repeat.asp
 
 //Manejo de cadenas
-let nombre;
-nombre = "Diana";
+let nombreS;
+nombreS = "Diana";
 
 let esBueno = "Me gusta ";
 let lenguaje = "JavaScript";
@@ -105,7 +107,7 @@ let cancion = "Die for you";
 
 console.log(grupo.length);
 
-grupo = grupo.concat(" ",": es muy bueno"," ","Y me gusta mucho");
+grupo = grupo.concat(" ", ": es muy bueno", " ", "Y me gusta mucho");
 grupo = grupo.toUpperCase();
 
 console.log(grupo);
@@ -113,3 +115,37 @@ console.log(grupo);
 let separar = grupo.split(" ");
 console.log(separar);
 console.table(separar);
+
+//Ejemplo de : 
+
+//Replace();
+let str = "Hola mundo";
+let res = str.replace("mundo", "Diana");
+
+console.log(str);
+console.log(res);
+
+//Includes();
+let n = res.includes("Aviles");
+console.log(n);
+let s = res.includes("Hola");
+console.log(s);
+
+//Repeat();
+console.log(res.repeat(3));
+
+//Number(); - > es para convertir tipos
+let folios = "1503.3535ewgjvoie34543ejbew";
+console.log(Number(folios));
+
+//ParseInt() y ParseFloat() - > son para extraer un número de un string
+console.log(parseInt(folios));
+console.log(parseFloat(folios));
+//conversiones
+console.log(parseInt("A",16));
+console.log(parseInt("111010101",2));
+
+
+
+
+
