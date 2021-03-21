@@ -1,4 +1,3 @@
-
 /*
 console.log("Mensaje a la consola");
 //alert("Hola mundo");
@@ -325,7 +324,7 @@ suma(100,150);
 
 //------------------- IIFE FUNCIONES QUE SE INVOCAN AUTOMATICAMENTE
 
-(function(lenguaje){ //Variables a trabajar
+(function (lenguaje) { //Variables a trabajar
     console.log(`Me invoco automáticamente y estoy trabajando con ${lenguaje}.`);
 })("JavaScript"); //Lo que le quiero enviar
 
@@ -334,11 +333,11 @@ console.clear();
 //------------------- Métodos de propiedad (Función dentro de un objeto) --> Metodos en OO
 const musica = {
 
-    reproducir: function(cancion){
+    reproducir: function (cancion) {
         console.log(`Reproduciendo la canción: ${cancion}`);
     },
 
-    pausar: function() {
+    pausar: function () {
         console.log("Pausa.....");
     }
 
@@ -352,7 +351,7 @@ musica.pausar();
 console.clear();
 
 //------------------- Declarar métodos fuera del objeto (mala practica)
-musica.borrar = function(id) {
+musica.borrar = function (id) {
     console.log(`Borramos canción con id: ${id}`);
 }
 
@@ -360,24 +359,24 @@ musica.borrar(2);
 // Puede generar código spagueti
 
 //------------------- Function que regresan un valor
-const resta = function(a=0,b=0) {
-    return a-b;
+const resta = function (a = 0, b = 0) {
+    return a - b;
 }
 
-let resultado = resta(30,20);
+let resultado = resta(30, 20);
 console.log(resultado);
 
 console.clear();
 
 //------------------- Arrow function
-const restaAF = (a = 0, b = 0) => a-b;
-resultado = restaAF(40,20);
+const restaAF = (a = 0, b = 0) => a - b;
+resultado = restaAF(40, 20);
 console.log(resultado);
 
 console.clear();
 
 //--- si es solo un parametro, se quita el parentesis
-const multiAF = numero => numero*10;
+const multiAF = numero => numero * 10;
 let total = multiAF(30);
 console.log(total);
 
@@ -454,19 +453,84 @@ const tarea2 = new Tarea("Aprender Go","MUY BAJA");
 console.log(tarea1);
 console.log(tarea2);
 
-*/
+
 //------------------- Clases nuevas en JavaScript
-class Tarea{
-    constructor(nombre,urgencia){
+class Tarea {
+    constructor(nombre, urgencia) {
         this.nombre = nombre;
         this.urgencia = urgencia;
     }
 };
 
 const tarea1 = new Tarea("Aprender ionic", "URGENTE");
-const tarea2 = new Tarea("Aprender Go","MUY BAJA");
+const tarea2 = new Tarea("Aprender Go", "MUY BAJA");
 
 console.log(tarea1);
 console.log(tarea2);
 
 //usar babel para que sirva en todos los navegadores: https://babeljs.io/
+
+//------------------- Iteradores
+//--for(); -> Ejemplos
+for (let i = 0; i < 10; i += 2) {
+    console.log(`Iteración for : ${i}`);
+}
+
+//breaks
+for (i = 0; i < 12; i++) {
+    if (i === 3) { break }
+    console.log(`Contador con breaks: ${i}`);
+}
+
+//Continue
+for (y = 0; y < 12; y++) {
+    if (y === 3) { continue }
+    console.log(`Contador con continue: ${y}`);
+}
+
+//--while(); -> Ejemplos
+let x = 0;
+while (x < 10) {
+    console.log(`Iteración while: ${x}`);
+    x++;
+}
+//----forEach();
+myArray = ["Inuyasha", "Kagome", "Kikyo", "Naraku", "Miroku"];
+
+myArray.forEach((element, index, array) => {
+    console.table(index, element);
+});
+
+
+//----Map(); -> Crea un nuevo array con los resultados de la llamada a la función indicada, aplicados a cada uno de sus elementos
+const numeros = [2,5,7];
+const potencias = numeros.map((numero) => Math.pow(numero,2));
+console.log(potencias);
+
+//Usar map(), reduce() y filter() para tener código más limpio
+
+//reduce() -> retorna la función (recursión)
+const suma = [10,20,30].reduce((a,b) => a + b);
+console.log(suma);
+
+->>*/
+
+//Checa si hay nombres iguales, 
+const nombres = ["Diana", "Juan", "Emiliano", "Vanessa", "Hans","Juan","Diana","Diana"];
+
+const cantidadNombres = nombres.reduce((contadorNombre,nombre) => {
+    contadorNombre[nombre] = (contadorNombre[nombre] || 0) + 1;
+    return contadorNombre;
+}, {});
+
+console.log(cantidadNombres);
+
+console.clear();
+
+//filter() -> filtras los elementos que deseamos en un nuevo array (DEPENDE DEL LOS CRITERIOS)
+let numbers = [1,3,4,5,6,10,11,2,2,2,1,1,3,21,4,5,5];
+
+let newNumbers = numbers.filter(number => number > 10);
+console.log(newNumbers);
+
+
