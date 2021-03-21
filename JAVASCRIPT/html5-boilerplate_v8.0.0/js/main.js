@@ -247,8 +247,9 @@ console.log(persona["domicilio"]["calle"]);
 
 console.clear();
 
-*/
+->*/
 
+/*->
 //-------------------Template strings
 
 //Antes
@@ -276,4 +277,47 @@ lista = `<ul>
         </ul>`;
 
 contenedorTexto.innerHTML = lista;
+
+
+
+//------------------- Function Declaration
+
+/*function saludar() {
+console.log("Hola");
+}
+
+saludar();
+*/
+
+/*
+saludar();
+
+function saludar(nombre,trabajo = "No sabemos!"){
+    console.log(`Hola ${nombre} y trabajo ${trabajo}`);
+}
+
+saludar("Diana Aviles");
+saludar("Diana", "CCA");
+*/
+/*
+//------------------- Function expression -> primero declaro funcion y luego ejecuto
+const hola = function(){
+    alert("hola a todos");
+}
+
+hola();
+*/
+
+//---- otro ejemplo
+/*
+const suma = function(a = 0, b= 0){
+    console.log(a+b);
+}
+
+suma();
+suma(20,10);
+suma(100,150);
+*/
+
+//Para optimizar espacio: https://javascript-minifier.com/;
 
