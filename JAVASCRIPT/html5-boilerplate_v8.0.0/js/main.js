@@ -424,3 +424,32 @@ console.log(viaje2);
 
 })("Londres","Paris");
 */
+
+
+//------------------- Object literal más complejo
+
+const persona = {
+    nombre: "Diana",
+    edad: 22,
+    anioNacimiento: function(){
+        return new Date().getFullYear() - this.edad;
+    }
+};
+
+
+console.log(persona.anioNacimiento());
+
+console.clear();
+
+//------------------- Object constructor
+function Tarea(nombre,urgencia){
+    this.nombre = nombre;
+    this.urgencia = urgencia;
+
+}
+
+const tarea1 = new Tarea("Aprender ionic", "URGENTE");
+const tarea2 = new Tarea("Aprender Go","MUY BAJA");
+
+console.log(tarea1);
+console.log(tarea2);
