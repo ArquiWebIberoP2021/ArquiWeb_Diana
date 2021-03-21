@@ -3,7 +3,7 @@
 console.log("Mensaje a la consola");
 //alert("Hola mundo");
 
-//Tipos de datos
+//-------------------Tipos de datos
 var mensaje = "Es un mensaje";
 var count = 1;
 var pi = 3.1415;
@@ -16,7 +16,7 @@ console.log(esDivertido);
 
 
 
-//Usando use strict - no te permite utilizar variables no declaradas para código seguro
+//-------------------Usando use strict - no te permite utilizar variables no declaradas para código seguro
 //"use strict";
 
 
@@ -35,7 +35,7 @@ var main = function () {
 main();
 
 
-//Diferentes mensajes
+//-------------------Diferentes mensajes
 console.log(123);
 console.log("123");
 console.table([1, 2, 3, 4]);
@@ -45,7 +45,7 @@ console.error("Existe un error en tu programa");
 
 //console.clear();
 
-//Pruebas de rendimiento
+//-------------------Pruebas de rendimiento
 console.time("sumaArreglo");
 let numbers = [5, 6, 7, 3, 2, 5, 5, 6, 3, 2, 5, 6, 32, 2, 353, 43, 2, 2, 3423, 3];
 let result = 0;
@@ -60,7 +60,7 @@ console.timeEnd("sumaArreglo");
 
 
 
-//Crear variables
+//-------------------Crear variables
 // Ya no se utiliza var, ahora es let y const
 
 "use strict";
@@ -83,7 +83,7 @@ const PI = 3.1416;
 
 console.log(PI);
 
-//Instanciando al objeto
+//-------------------Instanciando al objeto
 //const menuElemento = document.getElementById("liElemento1");
 
 //console.log(menuElemento.innerText);
@@ -93,7 +93,7 @@ console.log(PI);
 
 //use : https://www.w3schools.com/jsref/jsref_repeat.asp
 
-//Manejo de cadenas
+//-------------------Manejo de cadenas
 let nombreS;
 nombreS = "Diana";
 
@@ -145,7 +145,7 @@ console.log(parseFloat(folios));
 console.log(parseInt("A", 16));
 console.log(parseInt("111010101", 2));
 
-//Otros métodos
+//----Otros métodos
 
 //toFixed(); -> El número de digitos a utilizar
 let test = 128.234232;
@@ -165,7 +165,7 @@ console.log(typeof (lenguajes));
 let numero = 1234;
 console.log(typeof (numero));
 
-//Declaración de un objeto
+//-------------------Declaración de un objeto
 let persona = {
     nombre: "Diana",
     aPaterno: "Aviles"
@@ -173,7 +173,7 @@ let persona = {
 
 console.log(typeof (persona));
 
-//Instancia
+//----Instancia
 let fecha = new Date();
 console.log(fecha);
 console.log(typeof (fecha));
@@ -191,7 +191,7 @@ console.log(meses.length);
 console.log(Array.isArray(meses));
 console.log(Array.isArray(persona));
 
-//Ejemplos de otros métodos para arreglos
+//----Ejemplos de otros métodos para arreglos
 
 //-> Push() agrega un elemento al último y cambia en length del arreglo
 console.log(meses.push("Julio", "Agosto"));
@@ -217,9 +217,9 @@ console.log(meses.reverse());
 console.log(meses.sort());
 
 console.clear();
-*/
 
-// Objejtos LITERALES
+
+//-------------------Objejtos LITERALES
 
 const persona = {
     nombre: "Diana",
@@ -247,6 +247,33 @@ console.log(persona["domicilio"]["calle"]);
 
 console.clear();
 
+*/
+
+//-------------------Template strings
+
+//Antes
+const nombre = "Diana",
+    trabajo = "Supervisora CCA";
+
+console.log("Nombre: " + nombre + " Trabajo como: " + trabajo);
+
+//Ahora con template
+console.log(`Nombre: ${nombre}, Trabajo: ${trabajo}`);
 
 
+//usando query selector
+const contenedorTexto = document.querySelector("#secMensaje");
+
+let lista = '<ul>' + '<li>Nombre: ' + nombre + '</li>'
+    + '<li>Trabajo: ' + trabajo + '</li>' + '<ul>';
+
+contenedorTexto.innerHTML = lista;
+
+//USO DE TEMPLATE STRINGS
+lista = `<ul>
+            <li> Nombre1: ${nombre}</li>
+            <li> Trabajo1: ${trabajo}</li>
+        </ul>`;
+
+contenedorTexto.innerHTML = lista;
 
