@@ -1,4 +1,4 @@
-/*
+
 
 console.log("Mensaje a la consola");
 //alert("Hola mundo");
@@ -216,6 +216,11 @@ console.log(meses.reverse());
 //->sort(); -> Ordena alfabeticamente o por por numero (ascendente o descendente)
 console.log(meses.sort());
 
-->>> */
+console.clear();
+
+
+
+
+
 
 
