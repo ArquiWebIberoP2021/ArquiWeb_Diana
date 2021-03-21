@@ -86,4 +86,4 @@ console.log(PI);
 const menuElemento = document.getElementById("liElemento1")
 
 ///console.log(menuElemento.innerText);
-console.log(menuElemento.innerHTML);
+//console.log(menuElemento.innerHTML);
