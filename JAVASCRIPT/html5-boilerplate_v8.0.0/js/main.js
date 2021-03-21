@@ -1,4 +1,4 @@
-
+/*
 
 console.log("Mensaje a la consola");
 //alert("Hola mundo");
@@ -84,7 +84,7 @@ const PI = 3.1416;
 console.log(PI);
 
 //Instanciando al objeto
-const menuElemento = document.getElementById("liElemento1");
+//const menuElemento = document.getElementById("liElemento1");
 
 //console.log(menuElemento.innerText);
 //console.log(menuElemento.innerHTML);
@@ -142,8 +142,8 @@ console.log(Number(folios));
 console.log(parseInt(folios));
 console.log(parseFloat(folios));
 //conversiones
-console.log(parseInt("A",16));
-console.log(parseInt("111010101",2));
+console.log(parseInt("A", 16));
+console.log(parseInt("111010101", 2));
 
 //Otros métodos
 
@@ -157,6 +157,65 @@ console.log(test.toString());
 //date();
 console.log(Date());
 
+//Tipos de datos
 
+let lenguajes = ["HTML5", "JS", "PHP"];
+console.log(typeof (lenguajes));
+
+let numero = 1234;
+console.log(typeof (numero));
+
+//Declaración de un objeto
+let persona = {
+    nombre: "Diana",
+    aPaterno: "Aviles"
+}
+
+console.log(typeof(persona));
+
+//Instancia
+let fecha = new Date();
+console.log(fecha);
+console.log(typeof(fecha));
+
+const numeros = [1,2,3,4,5];
+console.log(numeros);
+console.table(numeros);
+
+let meses = new Array("Enero","Febrero","Marzo","Abril","Mayo", "Junio");
+console.log(meses);
+console.log(typeof(meses));
+console.log(meses[2]);
+console.log(meses.length);
+
+console.log(Array.isArray(meses));
+console.log(Array.isArray(persona));
+
+//Ejemplos de otros métodos para arreglos
+
+//-> Push() agrega un elemento al último y cambia en length del arreglo
+console.log(meses.push("Julio","Agosto"));
+
+//->unshift(); -> agrega un elemento al principio del arreglo cambiando el length del arreeglo
+console.log(meses.unshift("Diciembre"));
+
+//-> pop(); -> Elimina el ultimo elemento del arreglo y lo regresa
+console.log(meses.pop());
+
+//->shift(); -> Elimina el primer elemento y lo regresa 
+console.log(meses.shift());
+
+//->splice(); -> elimina/agrega los elementos poniendo un inicio y un final y regresa los elementos eliminados
+console.log(meses);
+console.log(meses.splice(3,2,"Mes 4","Mes 5"));
+console.log(meses);
+
+//->reverse(); -> Ordena alreves los elementos del arreglo
+console.log(meses.reverse());
+
+//->sort(); -> Ordena alfabeticamente o por por numero (ascendente o descendente)
+console.log(meses.sort());
+
+->>> */
 
 
