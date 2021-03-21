@@ -427,7 +427,7 @@ console.log(viaje2);
 
 
 //------------------- Object literal más complejo
-
+/*
 const persona = {
     nombre: "Diana",
     edad: 22,
@@ -453,3 +453,20 @@ const tarea2 = new Tarea("Aprender Go","MUY BAJA");
 
 console.log(tarea1);
 console.log(tarea2);
+
+*/
+//------------------- Clases nuevas en JavaScript
+class Tarea{
+    constructor(nombre,urgencia){
+        this.nombre = nombre;
+        this.urgencia = urgencia;
+    }
+};
+
+const tarea1 = new Tarea("Aprender ionic", "URGENTE");
+const tarea2 = new Tarea("Aprender Go","MUY BAJA");
+
+console.log(tarea1);
+console.log(tarea2);
+
+//usar babel para que sirva en todos los navegadores: https://babeljs.io/
