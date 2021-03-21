@@ -373,3 +373,54 @@ console.clear();
 const restaAF = (a = 0, b = 0) => a-b;
 resultado = restaAF(40,20);
 console.log(resultado);
+
+console.clear();
+
+//--- si es solo un parametro, se quita el parentesis
+const multiAF = numero => numero*10;
+let total = multiAF(30);
+console.log(total);
+
+//Ejercicio, adaptar el siguiente código a lo nuevo aprendido
+
+/*
+var viajando = function(destino){
+    return "viajanado a la cidad de: " + destino;
+}
+
+var viaje;
+
+viaje = viajando("Londres");
+console.log(viaje);
+
+viaje = viajando("Paris");
+console.log(viaje);
+*/
+//manera optimizada
+
+//1
+/*
+const viajando = destino => `viajando a la ciudad de ${destino}`
+let viaje1 = viajando("Londres");
+let viaje2 = viajando("Paris");
+
+console.log(viaje1);
+console.log(viaje2);
+*/
+
+/*
+//2
+(function(viaje1,viaje2){
+    console.log(`Viajando a la ciudad de ${viaje1} y ${viaje2}`);
+})("Londres","Paris");
+*/
+
+/*
+//3
+(function(viaje1,viaje2){
+
+    console.log(`Viajando a la ciudad de ${viaje1}`);
+    console.log(`Viajando a la ciudad de ${viaje2}`);
+
+})("Londres","Paris");
+*/
