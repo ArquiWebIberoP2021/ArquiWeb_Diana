@@ -1,5 +1,5 @@
 
-
+/*
 console.log("Mensaje a la consola");
 //alert("Hola mundo");
 
@@ -171,20 +171,20 @@ let persona = {
     aPaterno: "Aviles"
 }
 
-console.log(typeof(persona));
+console.log(typeof (persona));
 
 //Instancia
 let fecha = new Date();
 console.log(fecha);
-console.log(typeof(fecha));
+console.log(typeof (fecha));
 
-const numeros = [1,2,3,4,5];
+const numeros = [1, 2, 3, 4, 5];
 console.log(numeros);
 console.table(numeros);
 
-let meses = new Array("Enero","Febrero","Marzo","Abril","Mayo", "Junio");
+let meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio");
 console.log(meses);
-console.log(typeof(meses));
+console.log(typeof (meses));
 console.log(meses[2]);
 console.log(meses.length);
 
@@ -194,7 +194,7 @@ console.log(Array.isArray(persona));
 //Ejemplos de otros métodos para arreglos
 
 //-> Push() agrega un elemento al último y cambia en length del arreglo
-console.log(meses.push("Julio","Agosto"));
+console.log(meses.push("Julio", "Agosto"));
 
 //->unshift(); -> agrega un elemento al principio del arreglo cambiando el length del arreeglo
 console.log(meses.unshift("Diciembre"));
@@ -207,7 +207,7 @@ console.log(meses.shift());
 
 //->splice(); -> elimina/agrega los elementos poniendo un inicio y un final y regresa los elementos eliminados
 console.log(meses);
-console.log(meses.splice(3,2,"Mes 4","Mes 5"));
+console.log(meses.splice(3, 2, "Mes 4", "Mes 5"));
 console.log(meses);
 
 //->reverse(); -> Ordena alreves los elementos del arreglo
@@ -217,9 +217,35 @@ console.log(meses.reverse());
 console.log(meses.sort());
 
 console.clear();
+*/
 
+// Objejtos LITERALES
 
+const persona = {
+    nombre: "Diana",
+    aPaterno: "Aviles",
+    edad: 22,
+    trabaja: false,
+    libros: ["Saga Crepusculo", "Pricipito"],
+    domicilio: {
+        calle: "Otomies",
+        numeroExterior: 225,
+        numeroInterior: "lt4",
+        municipio: "Ecatepec de Morelos"
+    }
+}
 
+console.log(persona);
+console.log(persona.nombre);
+console.log(persona.domicilio.municipio);
+console.log(persona.libros);
+console.log(persona.libros[1]);
+console.table(persona);
+
+//Otra forma de acceder
+console.log(persona["domicilio"]["calle"]);
+
+console.clear();
 
 
 
