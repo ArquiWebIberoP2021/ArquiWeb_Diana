@@ -1,3 +1,4 @@
+/*
 console.log("Mensaje a la consola");
 //alert("Hola mundo");
 
@@ -10,5 +11,26 @@ var esDivertido = true;
 console.log(mensaje);
 console.log(pi);
 console.log(count);
-console.log(esDivertido);
+console.log(esDivertido); 
+
+*/
+
+//Usando use strict - no te permite utilizar variables no declaradas para código seguro
+//"use strict";
+
+
+var main = function(){
+    "use strict";
+
+    var mensaje = "HOLA MUNDO!",
+    count = 1, 
+    pi = 3.1416,
+    esDivertido = true;
+
+
+    console.log(mensaje)
+}
+
+main();
+
 
