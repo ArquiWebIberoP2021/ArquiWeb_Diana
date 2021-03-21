@@ -323,7 +323,7 @@ suma(100,150);
 
 
 //------------------- IIFE FUNCIONES QUE SE INVOCAN AUTOMATICAMENTE
-
+/*>>>>>>>>>>>>
 (function (lenguaje) { //Variables a trabajar
     console.log(`Me invoco automáticamente y estoy trabajando con ${lenguaje}.`);
 })("JavaScript"); //Lo que le quiero enviar
@@ -379,7 +379,7 @@ console.clear();
 const multiAF = numero => numero * 10;
 let total = multiAF(30);
 console.log(total);
-
+>>>>>>>>>>>*/
 //Ejercicio, adaptar el siguiente código a lo nuevo aprendido
 
 /*
@@ -513,7 +513,7 @@ console.log(potencias);
 const suma = [10,20,30].reduce((a,b) => a + b);
 console.log(suma);
 
-->>*/
+
 
 //Checa si hay nombres iguales, 
 const nombres = ["Diana", "Juan", "Emiliano", "Vanessa", "Hans","Juan","Diana","Diana"];
@@ -533,4 +533,19 @@ let numbers = [1,3,4,5,6,10,11,2,2,2,1,1,3,21,4,5,5];
 let newNumbers = numbers.filter(number => number > 10);
 console.log(newNumbers);
 
+
+//------------------- SCOPE - ALCANCE 
+//"use Strict"
+
+let musica2 = "Pop";
+
+if(musica2){
+    let musica2 = "Acustico";
+    console.log(`Dentro del if ${musica2}`);
+}
+
+console.log(`Èl valor de la variable música fuera del if: ${musica2}`)
+->>*/
+
+//------------------- Object destructuring: la forma en como se extraen valores de  un objeto
 
