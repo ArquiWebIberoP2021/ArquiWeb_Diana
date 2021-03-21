@@ -348,3 +348,28 @@ musica.reproducir("10,000 hours");
 musica.reproducir("Monster");
 musica.reproducir("Justice");
 musica.pausar();
+
+console.clear();
+
+//------------------- Declarar métodos fuera del objeto (mala practica)
+musica.borrar = function(id) {
+    console.log(`Borramos canción con id: ${id}`);
+}
+
+musica.borrar(2);
+// Puede generar código spagueti
+
+//------------------- Function que regresan un valor
+const resta = function(a=0,b=0) {
+    return a-b;
+}
+
+let resultado = resta(30,20);
+console.log(resultado);
+
+console.clear();
+
+//------------------- Arrow function
+const restaAF = (a = 0, b = 0) => a-b;
+resultado = restaAF(40,20);
+console.log(resultado);
