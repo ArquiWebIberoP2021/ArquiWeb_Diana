@@ -545,7 +545,7 @@ if(musica2){
 }
 
 console.log(`Èl valor de la variable música fuera del if: ${musica2}`)
-->>*/
+
 
 //------------------- Object destructuring: la forma en como se extraen valores de  un objeto
 const cliente = {
@@ -593,4 +593,84 @@ console.log(saldo);
 console.log(deportes[1]);
 */
 
-console.log(nombre,tipo,ciudad,saldo,deportes[1]);
+//console.log(nombre,tipo,ciudad,saldo,deportes[1]);
+
+
+//------------------- Object Literal Enhacement: Se usa para unir objetos.
+
+/*
+const banda = "Metallica",
+      genero = "Heavy Metal",
+      canciones = ["Master of Puppets","Seek & Destroy", "Enter SandMan"];
+
+
+//antes
+/*
+const metallica = {
+    banda: banda,
+    genero: genero,
+    canciones:canciones
+};
+
+console.log(metallica);
+*/
+
+//ahora
+
+/*
+const metallica = {banda,genero, canciones}
+console.log(metallica);
+*/
+
+//reduce()
+const suma = [10,20,30].reduce((a,b) => a + b);
+console.log(suma);
+
+
+
+//Checa si hay nombres iguales, 
+const nombres = ["Diana", "Juan", "Emiliano", "Vanessa", "Hans","Juan","Diana","Diana"];
+
+const cantidadNombres = nombres.reduce((contadorNombre,nombre) => {
+    contadorNombre[nombre] = (contadorNombre[nombre] || 0) + 1;
+    return contadorNombre;
+}, {});
+
+
+
+
+//filter() -> filtras los elementos que deseamos en un nuevo array (DEPENDE DEL LOS CRITERIOS)
+let numbers = [1,3,4,5,6,10,11,2,2,2,1,1,3,21,4,5,5];
+
+let newNumbers = numbers.filter(number => number > 10);
+console.log(newNumbers);
+
+
+//find();
+const personas = [
+    {nombre: "Antonio", edad: 42},
+    {nombre: "César", edad: 21},
+    {nombre: "Mariana", edad: 20},
+    {nombre: "Steve", edad: 23, aprendido: "Javascript"},
+    {nombre: "Jair", edad: 22}
+
+];
+
+console.log(personas);
+
+//Obtener las personas mayores de 21 años
+const mayores = personas.filter(persona => persona.edad > 21);
+console.log(mayores);
+
+//Extraer información de Mariana
+const mariana = personas.find(persona => persona.nombre === "Mariana");
+console.log(mariana);
+
+//Reduce- Obtiene un acumulado de registros
+let totalR = personas.reduce((edadTotal,persona)=> {
+    return edadTotal + persona.edad;
+},0); // 0 es a partir de qué número voy a iniciar, se puede cambiar para ver la diferencia
+console.log(totalR);
+
+//promedio edad
+console.log(totalR/personas.length);
