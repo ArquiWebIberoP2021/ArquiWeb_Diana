@@ -674,3 +674,7 @@ console.log(totalR);
 
 //promedio edad
 console.log(totalR/personas.length);
+
+
+
+/* FETCH API */
