@@ -623,6 +623,7 @@ console.log(metallica);
 */
 
 //reduce()
+/*
 const suma = [10,20,30].reduce((a,b) => a + b);
 console.log(suma);
 
@@ -675,6 +676,58 @@ console.log(totalR);
 //promedio edad
 console.log(totalR/personas.length);
 
-
+*/
 
 /* FETCH API */
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<
+// -> CALLBACKS
+
+/*
+function funcion1(fn, succesCallback, errorCallback) {
+  setTimeout(function () {
+
+    //Si es exitosa
+    succesCallback(fn);
+  }, 1000);
+
+}
+
+
+funcion1('PRIMERA', function (response) {
+    console.log(`${response} llamada realizada`);
+    funcion1('SEGUNDA', function (response) {
+      console.log(`${response} llamada realizada`);
+      funcion1('TERCERA', function (response) {
+        console.log(`${response} llamada realizada`);
+        funcion1('CUARTA', function (response) {
+          console.log(`${response} llamada realizada`);
+          funcion1('QUINTA', function (response) {
+            console.log(`${response} llamada realizada`);
+          }, function (error) {
+            console.log(error);
+          });
+        }, function (error) {
+          console.log(error);
+        });
+      }, function (error) {
+        console.log(error);
+      });
+  
+    }, function (error) {
+      console.log(error);
+    });
+  }, function (error) {
+    console.log(error);
+  });
+  */
+
+
+
+
+
+
+  
+
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<
+// -> CALLBACKS
