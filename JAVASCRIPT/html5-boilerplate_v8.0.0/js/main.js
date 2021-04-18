@@ -731,7 +731,7 @@ funcion1('PRIMERA', function (response) {
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<
 // -> CALLBACKS
-
+/*
 function funcion1(fn, succesCallback, errorCallback) {
   setTimeout(function () {
 
@@ -766,3 +766,6 @@ funcion1('PRIMERA', function (response) {
 }, function (error) {
   console.log(error);
 });
+*/
+
+
