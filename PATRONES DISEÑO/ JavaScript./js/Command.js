@@ -1,5 +1,5 @@
-     //-> Command
-    //Comando
+//-> Command
+//Mando
 
 //Calculadora básica con 4 operaciones, + - x /, cada operacioón encapsulado con COMMAND
 //Mantiene una pila de comandos, cada nuevo comando se ejecuta y se coloca en la pila
@@ -11,34 +11,33 @@ function sub(x, y) { return x - y; }
 function mul(x, y) { return x * y; }
 function div(x, y) { return x / y; }
 
-var Command = function (execute, undo, value) {
+let Command = function (execute, undo, value) {
     this.execute = execute;
     this.undo = undo;
     this.value = value;
 }
 
-var AddCommand = function (value) {
+let AddCommand = function (value) {
     return new Command(add, sub, value);
 };
 
-var SubCommand = function (value) {
+let SubCommand = function (value) {
     return new Command(sub, add, value);
 };
 
-var MulCommand = function (value) {
+let MulCommand = function (value) {
     return new Command(mul, div, value);
 };
 
-var DivCommand = function (value) {
+let DivCommand = function (value) {
     return new Command(div, mul, value);
 };
 
-var Calculator = function () {
-    var current = 0;
-    var commands = [];
-
+let Calculator = function () {
+    let current = 0;
+    let commands = [];
     function action(command) {
-        var name = command.execute.toString().substr(9, 3);
+        let name = command.execute.toString().substr(9, 3);
         return name.charAt(0).toUpperCase() + name.slice(1);
     }
 
@@ -46,13 +45,15 @@ var Calculator = function () {
         execute: function (command) {
             current = command.execute(current, command.value);
             commands.push(command);
-            log.add(action(command) + ": " + command.value);
+            log.add(`${action(command)}: ${command.value}`);
+
         },
 
         undo: function () {
-            var command = commands.pop();
+            let command = commands.pop();
             current = command.undo(current, command.value);
-            log.add("Undo " + action(command) + ": " + command.value);
+            log.add(`Deshacer ${action(command)}: ${command.value}`);
+
         },
 
         getCurrentValue: function () {
@@ -61,10 +62,10 @@ var Calculator = function () {
     }
 }
 
-// log helper
+// Registro para mostrar los resultados
 
-var log = (function () {
-    var log = "";
+let log = (function () {
+    let log = "";
 
     return {
         add: function (msg) { log += msg + "\n"; },
@@ -73,21 +74,20 @@ var log = (function () {
 })();
 
 function run() {
-    var calculator = new Calculator();
+    let calculator = new Calculator();
 
-    // issue commands
-
+    // Solicitudes 
     calculator.execute(new AddCommand(100));
     calculator.execute(new SubCommand(24));
     calculator.execute(new MulCommand(6));
     calculator.execute(new DivCommand(2));
 
-    // reverse last two commands
+    // invertir los últimos dos comandos
 
     calculator.undo();
     calculator.undo();
 
-    log.add("\nValue: " + calculator.getCurrentValue());
+    log.add("\nValor: " + calculator.getCurrentValue());
     log.show();
 }
 
