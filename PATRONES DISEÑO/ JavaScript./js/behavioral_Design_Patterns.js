@@ -38,5 +38,5 @@ run();
 
 */
 
-//Chain of Responsability
-//Cadena de responsabilidad
+//Command
+//Comando
