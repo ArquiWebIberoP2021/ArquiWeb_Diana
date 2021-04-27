@@ -1,10 +1,10 @@
      // Memento
-    //Interprete
+     //Recuerdo
 
 //Descripción
 
 
-var Person = function(name, street, city, state) {
+let Person = function(name, street, city, state) {
     this.name = name;
     this.street = street;
     this.city = city;
@@ -14,12 +14,12 @@ var Person = function(name, street, city, state) {
 Person.prototype = {
  
     hydrate: function() {
-        var memento = JSON.stringify(this);
+        let memento = JSON.stringify(this);
         return memento;
     },
  
     dehydrate: function(memento) {
-        var m = JSON.parse(memento);
+        let m = JSON.parse(memento);
         this.name = m.name;
         this.street = m.street;
         this.city = m.city;
@@ -27,7 +27,7 @@ Person.prototype = {
     }
 }
  
-var CareTaker = function() {
+let CareTaker = function() {
     this.mementos = {};
  
     this.add = function(key, memento) {
@@ -40,8 +40,8 @@ var CareTaker = function() {
 }
  
 // log helper
-var log = (function () {
-    var log = "";
+let log = (function () {
+    let log = "";
  
     return {
         add: function (msg) { log += msg + "\n"; },
@@ -51,29 +51,29 @@ var log = (function () {
  
  
 function run() {
-    var mike = new Person("Mike Foley", "1112 Main", "Dallas", "TX");
-    var john = new Person("John Wang", "48th Street", "San Jose", "CA");
-    var caretaker = new CareTaker();
+    let Superman = new Person("Superman", "1112 Main", "Dallas", "TX");
+    let Batman = new Person("Batman", "48th Street", "San Jose", "CA");
+    let caretaker = new CareTaker();
  
     // save state
+    caretaker.add(1, Superman.hydrate());
+    caretaker.add(2, Batman.hydrate());
  
-    caretaker.add(1, mike.hydrate());
-    caretaker.add(2, john.hydrate());
+    // Cambiando identidad
+    Superman.name = "Clark Kent";
+    Batman.name = "Bruce Wayne";
  
-    // mess up their names
+    // Restaurando 
+    Superman.dehydrate(caretaker.get(1));
+    Batman.dehydrate(caretaker.get(2));
  
-    mike.name = "King Kong";
-    john.name = "Superman";
- 
-    // restore original state
- 
-    mike.dehydrate(caretaker.get(1));
-    john.dehydrate(caretaker.get(2));
- 
-    log.add(mike.name);
-    log.add(john.name);
+    log.add(Superman.name);
+    log.add(Superman.street);
+    log.add(Batman.name);
+    log.add(Batman.street);
  
     log.show();
 }
 
 run();
+

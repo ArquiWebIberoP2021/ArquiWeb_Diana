@@ -1,10 +1,8 @@
     //Template Method
-    //Interprete
-
-//Descripción
+    //Método de Plantilla
 
 
-var datastore = {
+let datastore = {
     process: function() {
         this.connect();
         this.select();
@@ -19,10 +17,10 @@ function inherit(proto) {
     return new F();
 }
  
-// log helper
+// Registro para el Alert
  
-var log = (function() {
-    var log = "";
+let log = (function() {
+    let log = "";
  
     return {
         add: function(msg) { log += msg + "\n"; },
@@ -31,7 +29,7 @@ var log = (function() {
 })();
  
 function run() {
-    var mySql = inherit(datastore);
+    let mySql = inherit(datastore);
  
     // implement template steps
  

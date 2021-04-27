@@ -1,15 +1,13 @@
      //State
-    //Interprete
-
-//Descripción
+    //Estado
 
 
-var TrafficLight = function () {
-    var count = 0;
-    var currentState = new Red(this);
+let TrafficLight = function () {
+    let count = 0;
+    let currentState = new Red(this);
  
     this.change = function (state) {
-        // limits number of changes
+        // Cambios (limite)
         if (count++ >= 10) return;
         currentState = state;
         currentState.go();
@@ -20,37 +18,37 @@ var TrafficLight = function () {
     };
 }
  
-var Red = function (light) {
+let Red = function (light) {
     this.light = light;
  
     this.go = function () {
-        log.add("Red --> for 1 minute");
+        log.add("ROJO          -> UN MINUTO");
         light.change(new Green(light));
     }
 };
  
-var Yellow = function (light) {
+let Yellow = function (light) {
     this.light = light;
  
     this.go = function () {
-        log.add("Yellow --> for 10 seconds");
+        log.add("AMARILLO  -> 10 Segundos");
         light.change(new Red(light));
     }
 };
  
-var Green = function (light) {
+let Green = function (light) {
     this.light = light;
  
     this.go = function () {
-        log.add("Green --> for 1 minute");
+        log.add("VERDE       -> Un minuto");
         light.change(new Yellow(light));
     }
 };
  
-// log helper
- 
-var log = (function () {
-    var log = "";
+
+//Registro 
+let log = (function () {
+    let log = "";
  
     return {
         add: function (msg) { log += msg + "\n"; },
@@ -59,11 +57,10 @@ var log = (function () {
 })();
  
 function run() {
-    var light = new TrafficLight();
+    let light = new TrafficLight();
     light.start();
  
     log.show();
 }
 
 run();
-

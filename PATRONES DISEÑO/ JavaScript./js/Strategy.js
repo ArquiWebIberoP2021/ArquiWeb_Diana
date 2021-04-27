@@ -1,10 +1,8 @@
     // Strategy
-    //Interprete
-
-//Descripción
+    //Estrategia
 
 
-var Shipping = function() {
+let Shipping = function() {
     this.company = "";
 };
  
@@ -18,31 +16,31 @@ Shipping.prototype = {
     }
 };
  
-var UPS = function() {
+let UPS = function() {
     this.calculate = function(package) {
-        // calculations...
+        // calculando
         return "$45.95";
     }
 };
  
-var USPS = function() {
+let USPS = function() {
     this.calculate = function(package) {
-        // calculations...
+        // calculando
         return "$39.40";
     }
 };
  
-var Fedex = function() {
+let Fedex = function() {
     this.calculate = function(package) {
-        // calculations...
+        // calculando
         return "$43.20";
     }
 };
  
-// log helper
+//Resgistro para el ALERT
  
-var log = (function() {
-    var log = "";
+let log = (function() {
+    let log = "";
  
     return {
         add: function(msg) { log += msg + "\n"; },
@@ -51,22 +49,21 @@ var log = (function() {
 })();
  
 function run() {
-    var package = { from: "76712", to: "10012", weigth: "lkg" };
+    let package = { from: "76712", to: "10012", weigth: "lkg" };
  
-    // the 3 strategies
+    // 3 disponibles
+    let ups = new UPS();
+    let usps = new USPS();
+    let fedex = new Fedex();
  
-    var ups = new UPS();
-    var usps = new USPS();
-    var fedex = new Fedex();
- 
-    var shipping = new Shipping();
+    let shipping = new Shipping();
  
     shipping.setStrategy(ups);
-    log.add("UPS Strategy: " + shipping.calculate(package));
+    log.add(`Estregia UPS:   ${shipping.calculate(package)}`);
     shipping.setStrategy(usps);
-    log.add("USPS Strategy: " + shipping.calculate(package));
+    log.add(`Estregia USPS:  ${shipping.calculate(package)}`);
     shipping.setStrategy(fedex);
-    log.add("Fedex Strategy: " + shipping.calculate(package));
+    log.add(`Estregia FEDEX: ${shipping.calculate(package)}`);
  
     log.show();
 }

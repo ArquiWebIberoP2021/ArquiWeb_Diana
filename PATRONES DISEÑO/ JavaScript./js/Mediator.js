@@ -1,9 +1,8 @@
     //Mediator
-    //Interprete
+    //Mediador
 
-//Descripción
 
-var Participant = function(name) {
+let Participant = function(name) {
     this.name = name;
     this.chatroom = null;
 };
@@ -13,12 +12,13 @@ Participant.prototype = {
         this.chatroom.send(message, this, to);
     },
     receive: function(message, from) {
-        log.add(from.name + " to " + this.name + ": " + message);
+        log.add(`${from.name} a ${this.name}: ${message}`);
+        
     }
 };
  
-var Chatroom = function() {
-    var participants = {};
+let Chatroom = function() {
+    let participants = {};
  
     return {
  
@@ -28,9 +28,9 @@ var Chatroom = function() {
         },
  
         send: function(message, from, to) {
-            if (to) {                      // single message
+            if (to) {                      // Mensaje en especifico
                 to.receive(message, from);    
-            } else {                       // broadcast message
+            } else {                       // Mensaje para todos
                 for (key in participants) {   
                     if (participants[key] !== from) {
                         participants[key].receive(message, from);
@@ -41,10 +41,9 @@ var Chatroom = function() {
     };
 };
  
-// log helper
- 
-var log = (function() {
-    var log = "";
+//Para imprimir el Alert
+let log = (function() {
+    let log = "";
  
     return {
         add: function(msg) { log += msg + "\n"; },
@@ -53,26 +52,24 @@ var log = (function() {
 })();
  
 function run() {
-    var yoko = new Participant("Yoko");
-    var john = new Participant("John");
-    var paul = new Participant("Paul");
-    var ringo = new Participant("Ringo");
+    var Vane = new Participant("Vane");
+    var Diana = new Participant("Diana");
+    var Bernardo = new Participant("Bernardo");
+    var Mauricio = new Participant("Mauricio");
  
     var chatroom = new Chatroom();
-    chatroom.register(yoko);
-    chatroom.register(john);
-    chatroom.register(paul);
-    chatroom.register(ringo);
+    chatroom.register(Vane);
+    chatroom.register(Diana);
+    chatroom.register(Bernardo);
+    chatroom.register(Mauricio);
  
-    yoko.send("All you need is love.");
-    yoko.send("I love you John.");
-    john.send("Hey, no need to broadcast", yoko);
-    paul.send("Ha, I heard that!");
-    ringo.send("Paul, what do you think?", paul);
+    Mauricio.send("¿Bernardo qué resultado te salio en la macro?");
+    Mauricio.send("Bernardo Contesta");
+    Vane.send("¡Ya contestaaa!", Bernardo);
+    Diana.send("¿En que tema van?");
+    Bernardo.send("Creo que esta maaal", Mauricio);
  
     log.show();
 }
 
 run();
-
-
