@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost:4200/Info -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>RetoApp</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+  <script src="https://%20//api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"> </script> 
+
+
+<link rel="stylesheet" href="./RetoApp_files/styles.css"><style>body[_ngcontent-pio-c20]{
+    margin: auto;
+    padding: auto;
+    font-family:  'PT Sans', Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+header[_ngcontent-pio-c20]{
+  width:auto;
+  background: rgb(207, 18, 18);
+  font-family:  'PT Sans', Helvetica, Arial, sans-serif;
+  color: #fff;
+
+}
+
+#btn-menu[_ngcontent-pio-c20]{
+  display: none;
+}
+
+header[_ngcontent-pio-c20]   label[_ngcontent-pio-c20]{
+  display: none;
+  width: 35px;
+  height: 35px;
+  padding: 1px;
+  border-right: 1px solid #fff;
+}
+
+header[_ngcontent-pio-c20]   label[_ngcontent-pio-c20]:hover{
+  cursor: pointer;
+  background: rgb(0, 0, 0,0.3);
+}
+
+.menu[_ngcontent-pio-c20]   ul[_ngcontent-pio-c20]{
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  color: #fff;
+}
+
+.menu[_ngcontent-pio-c20]   li[_ngcontent-pio-c20]{
+  text-align: center;
+  flex-grow: 1;
+  border-right: 1px solid  #fff;
+}
+
+.menu[_ngcontent-pio-c20]   li[_ngcontent-pio-c20]:hover{
+  background: rgb(0, 0, 0,0.3);
+  z-index: 1;
+}
+
+.menu[_ngcontent-pio-c20]   li[_ngcontent-pio-c20] {
+  display: block;
+  padding: 20px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+@media (max-width:768px){
+  header[_ngcontent-pio-c20]   label[_ngcontent-pio-c20]{
+    display: block;
+  }
+  .menu[_ngcontent-pio-c20]{
+    position: absolute;
+    background: rgb(207, 18, 18);
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.5s;
+  }
+
+  .menu[_ngcontent-pio-c20]   ul[_ngcontent-pio-c20]{
+    flex-direction: column;
+  }
+
+  .menu[_ngcontent-pio-c20]   li[_ngcontent-pio-c20]{
+    border-top: 1px solid #fff;
+  }
+
+  #btn-menu[_ngcontent-pio-c20]:checked    ~ .menu[_ngcontent-pio-c20]{
+    margin:0;
+    z-index: 1;
+  }
+}
+
+.info[_ngcontent-pio-c20]{
+  background:#93B7BE;
+  height: 100vh;
+  width: 50%;
+ 
+}
+
+.loginBox[_ngcontent-pio-c20]{
+  height: 100vh;
+  width: 100%;
+  background:#F2F7F2;
+  color: rgb(207, 18, 18);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loginBox[_ngcontent-pio-c20]   .avatar[_ngcontent-pio-c20]{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 90px;
+  left: calc(48% - 50px);
+
+}
+
+.loginBox[_ngcontent-pio-c20]   input[_ngcontent-pio-c20]{ 
+  width: 100%;
+  margin-bottom:40px;
+  
+}
+
+.go[_ngcontent-pio-c20], .boton[_ngcontent-pio-c20]{
+  border: 1px solid #628395;
+  padding: 10px;
+  background-color: #628395;
+  color: #FFF;
+  text-decoration: none;
+  z-index: 1;
+  font-family:gill sans;
+  border-radius: 50px;
+  float: none;
+}
+
+#pantalla-dividida[_ngcontent-pio-c20]{
+  display: flex;
+  
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixxREFBcUQ7SUFDckQsV0FBVztBQUNmOztBQUVBO0VBQ0UsVUFBVTtFQUNWLDRCQUE0QjtFQUM1QixxREFBcUQ7RUFDckQsV0FBVzs7QUFFYjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGFBQWE7RUFDYixXQUFXO0VBQ1gsWUFBWTtFQUNaLFlBQVk7RUFDWiw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsNEJBQTRCO0FBQzlCOztBQUVBO0VBQ0UsU0FBUztFQUNULGdCQUFnQjtFQUNoQixVQUFVO0VBQ1YsYUFBYTtFQUNiLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osNkJBQTZCO0FBQy9COztBQUVBO0VBQ0UsNEJBQTRCO0VBQzVCLFVBQVU7QUFDWjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsV0FBVztFQUNYLHFCQUFxQjtBQUN2Qjs7QUFFQTtjQUNjOztBQUNkO0VBQ0U7SUFDRSxjQUFjO0VBQ2hCO0VBQ0E7SUFDRSxrQkFBa0I7SUFDbEIsNEJBQTRCO0lBQzVCLFVBQVU7SUFDVixpQkFBaUI7SUFDakIsb0JBQW9CO0VBQ3RCOztFQUVBO0lBQ0Usc0JBQXNCO0VBQ3hCOztFQUVBO0lBQ0UsMEJBQTBCO0VBQzVCOztFQUVBO0lBQ0UsUUFBUTtJQUNSLFVBQVU7RUFDWjtBQUNGOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGFBQWE7RUFDYixVQUFVOztBQUVaOztBQUdBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsdUJBQXVCO0VBQ3ZCLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7O0FBRXJCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLGFBQWE7RUFDYixrQkFBa0I7RUFDbEIsU0FBUztFQUNULHNCQUFzQjs7QUFFeEI7O0FBRUEsaUJBQWlCLDJCQUEyQjtFQUMxQyxXQUFXO0VBQ1gsa0JBQWtCOztBQUVwQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixhQUFhO0VBQ2IseUJBQXlCO0VBQ3pCLFdBQVc7RUFDWCxxQkFBcUI7RUFDckIsVUFBVTtFQUNWLHFCQUFxQjtFQUNyQixtQkFBbUI7RUFDbkIsV0FBVztBQUNiOztBQUVBLG1CQUFtQixZQUFZO0VBQzdCLGFBQWE7O0FBRWYiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5e1xyXG4gICAgbWFyZ2luOiBhdXRvO1xyXG4gICAgcGFkZGluZzogYXV0bztcclxuICAgIGZvbnQtZmFtaWx5OiAgJ1BUIFNhbnMnLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmO1xyXG4gICAgY29sb3I6ICNmZmY7XHJcbn1cclxuXHJcbmhlYWRlcntcclxuICB3aWR0aDphdXRvO1xyXG4gIGJhY2tncm91bmQ6IHJnYigyMDcsIDE4LCAxOCk7XHJcbiAgZm9udC1mYW1pbHk6ICAnUFQgU2FucycsIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7XHJcbiAgY29sb3I6ICNmZmY7XHJcblxyXG59XHJcblxyXG4jYnRuLW1lbnV7XHJcbiAgZGlzcGxheTogbm9uZTtcclxufVxyXG5cclxuaGVhZGVyIGxhYmVse1xyXG4gIGRpc3BsYXk6IG5vbmU7XHJcbiAgd2lkdGg6IDM1cHg7XHJcbiAgaGVpZ2h0OiAzNXB4O1xyXG4gIHBhZGRpbmc6IDFweDtcclxuICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjZmZmO1xyXG59XHJcblxyXG5oZWFkZXIgbGFiZWw6aG92ZXJ7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIGJhY2tncm91bmQ6IHJnYigwLCAwLCAwLDAuMyk7XHJcbn1cclxuXHJcbi5tZW51IHVse1xyXG4gIG1hcmdpbjogMDtcclxuICBsaXN0LXN0eWxlOiBub25lO1xyXG4gIHBhZGRpbmc6IDA7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBjb2xvcjogI2ZmZjtcclxufVxyXG5cclxuLm1lbnUgbGl7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGZsZXgtZ3JvdzogMTtcclxuICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAgI2ZmZjtcclxufVxyXG5cclxuLm1lbnUgbGk6aG92ZXJ7XHJcbiAgYmFja2dyb3VuZDogcmdiKDAsIDAsIDAsMC4zKTtcclxuICB6LWluZGV4OiAxO1xyXG59XHJcblxyXG4ubWVudSBsaSB7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgcGFkZGluZzogMjBweCAyMHB4O1xyXG4gIGNvbG9yOiAjZmZmO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufVxyXG5cclxuLypQYXJhIGhhY2VyIG1lbsO6IHJlc3BvbnNpdm8gc2Vnw7puIGVsIHRhbWHDsW8gZGUgbGEgcGFudGFsbGEgZGVsIGRpc3Bvc2l0aXZvXHJcbk1lZGlkYSB0YWJsZXQqL1xyXG5AbWVkaWEgKG1heC13aWR0aDo3NjhweCl7XHJcbiAgaGVhZGVyIGxhYmVse1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgfVxyXG4gIC5tZW51e1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYmFja2dyb3VuZDogcmdiKDIwNywgMTgsIDE4KTtcclxuICAgIHdpZHRoOiA3MCU7XHJcbiAgICBtYXJnaW4tbGVmdDogLTcwJTtcclxuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzO1xyXG4gIH1cclxuXHJcbiAgLm1lbnUgdWx7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIH1cclxuXHJcbiAgLm1lbnUgbGl7XHJcbiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2ZmZjtcclxuICB9XHJcblxyXG4gICNidG4tbWVudTpjaGVja2VkIH4gLm1lbnV7XHJcbiAgICBtYXJnaW46MDtcclxuICAgIHotaW5kZXg6IDE7XHJcbiAgfVxyXG59XHJcblxyXG4uaW5mb3tcclxuICBiYWNrZ3JvdW5kOiM5M0I3QkU7XHJcbiAgaGVpZ2h0OiAxMDB2aDtcclxuICB3aWR0aDogNTAlO1xyXG4gXHJcbn1cclxuXHJcblxyXG4ubG9naW5Cb3h7XHJcbiAgaGVpZ2h0OiAxMDB2aDtcclxuICB3aWR0aDogMTAwJTtcclxuICBiYWNrZ3JvdW5kOiNGMkY3RjI7XHJcbiAgY29sb3I6IHJnYigyMDcsIDE4LCAxOCk7XHJcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICBwYWRkaW5nOiA3MHB4IDMwcHg7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG5cclxufVxyXG5cclxuLmxvZ2luQm94IC5hdmF0YXJ7XHJcbiAgd2lkdGg6IDE1MHB4O1xyXG4gIGhlaWdodDogMTUwcHg7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogOTBweDtcclxuICBsZWZ0OiBjYWxjKDQ4JSAtIDUwcHgpO1xyXG5cclxufVxyXG5cclxuLmxvZ2luQm94IGlucHV0eyAvKkZvcm1hdG8gZW1haWwgeSBwYXNzd29yZCovXHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgbWFyZ2luLWJvdHRvbTo0MHB4O1xyXG4gIFxyXG59XHJcblxyXG4uZ28sIC5ib3RvbntcclxuICBib3JkZXI6IDFweCBzb2xpZCAjNjI4Mzk1O1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzYyODM5NTtcclxuICBjb2xvcjogI0ZGRjtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgei1pbmRleDogMTtcclxuICBmb250LWZhbWlseTpnaWxsIHNhbnM7XHJcbiAgYm9yZGVyLXJhZGl1czogNTBweDtcclxuICBmbG9hdDogbm9uZTtcclxufVxyXG5cclxuI3BhbnRhbGxhLWRpdmlkaWRhey8qTk8gQk9SUkFSKi9cclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIFxyXG59Il19 */</style><style>#mapa-mapbox[_ngcontent-pio-c17] 
+{
+	width: 98%;
+	height: 75%;
+	background-color: red;
+	
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1hcGEuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Q0FFQyxVQUFVO0NBQ1YsV0FBVztDQUNYLHFCQUFxQjs7QUFFdEIiLCJmaWxlIjoibWFwYS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI21hcGEtbWFwYm94IFxyXG57XHJcblx0d2lkdGg6IDk4JTtcclxuXHRoZWlnaHQ6IDc1JTtcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XHJcblx0XHJcbn1cclxuXHJcbiJdfQ== */</style><style>#imagen[_ngcontent-pio-c18]{
+      width: 500px;
+      margin: 1%;
+  }
+
+  #lala[_ngcontent-pio-c18]
+  {
+      margin: 4%;
+  }
+
+  #lala2[_ngcontent-pio-c18]
+  {
+      margin: 2%;
+  }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZm8uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiRUFBRTtNQUNJLFlBQVk7TUFDWixVQUFVO0VBQ2Q7O0VBRUE7O01BRUksVUFBVTtFQUNkOztFQUNBOztNQUVJLFVBQVU7RUFDZCIsImZpbGUiOiJpbmZvLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgICNpbWFnZW57XHJcbiAgICAgIHdpZHRoOiA1MDBweDtcclxuICAgICAgbWFyZ2luOiAxJTtcclxuICB9XHJcblxyXG4gICNsYWxhXHJcbiAge1xyXG4gICAgICBtYXJnaW46IDQlO1xyXG4gIH1cclxuICAjbGFsYTJcclxuICB7XHJcbiAgICAgIG1hcmdpbjogMiU7XHJcbiAgfSJdfQ== */</style></head>
+<body>
+  <app-root _nghost-pio-c20="" ng-version="11.2.11"><header _ngcontent-pio-c20=""><input _ngcontent-pio-c20="" type="checkbox" id="btn-menu"><label _ngcontent-pio-c20="" for="btn-menu"><img _ngcontent-pio-c20="" src="./RetoApp_files/opcones2.png" width="30px" alt="menu"><link _ngcontent-pio-c20="" href="./RetoApp_files/mapbox-gl.css" rel="stylesheet"></label><nav _ngcontent-pio-c20="" class="menu"><ul _ngcontent-pio-c20=""><li _ngcontent-pio-c20=""><a _ngcontent-pio-c20="" routerlink="/Login" routerlinkactive="active" class="btn btn-outline-light" ng-reflect-router-link="/Login" ng-reflect-router-link-active="active" href="http://localhost:4200/Login">Login Responsivo</a></li><li _ngcontent-pio-c20=""><a _ngcontent-pio-c20="" routerlink="/Mapa" routerlinkactive="active" class="btn btn-outline-light" ng-reflect-router-link="/Mapa" ng-reflect-router-link-active="active" href="http://localhost:4200/Mapa">Reto Mapa</a></li><li _ngcontent-pio-c20=""><a _ngcontent-pio-c20="" routerlink="/Info" routerlinkactive="active" class="btn btn-outline-light active" ng-reflect-router-link="/Info" ng-reflect-router-link-active="active" href="http://localhost:4200/Info">Infografias</a></li></ul></nav></header><router-outlet _ngcontent-pio-c20=""></router-outlet><app-info _nghost-pio-c18=""><br _ngcontent-pio-c18=""><h1 _ngcontent-pio-c18="" class="text-center">Retos en la Pagina</h1><div _ngcontent-pio-c18="" id="lala"><h3 _ngcontent-pio-c18=""> 1. Reto Framework FrontEnd (<a _ngcontent-pio-c18="" href="https://angular.io/" class="text-warning stretched-link">Angular</a>) </h3><div _ngcontent-pio-c18="" id="lala2"><h5 _ngcontent-pio-c18="">Angular es un framework opensource desarrollado por Google para facilitar la creación y programación de aplicaciones web de una sola página.</h5><h5 _ngcontent-pio-c18="">Angular separa completamente el frontend y el backend en la aplicación, evita escribir código repetitivo y mantiene todo más ordenado gracias a su patrón MVC (Modelo-Vista-Controlador) asegurando los desarrollos con rapidez, a la vez que posibilita modificaciones y actualizaciones.</h5></div><div _ngcontent-pio-c18="" id="Centrado" class="col-md-20 text-center"><img _ngcontent-pio-c18="" src="./RetoApp_files/ANGULAR.png" id="imagen" alt="Info. ANGULAR" class="img-thumbnail center-block"></div><br _ngcontent-pio-c18=""><h3 _ngcontent-pio-c18="">2. Reto Framework CSS (<a _ngcontent-pio-c18="" href="https://getbootstrap.com/" class="text-warning stretched-link">Bootstrap</a>) </h3><div _ngcontent-pio-c18="" id="lala2"><h5 _ngcontent-pio-c18="">Bootstrap es un framework CSS desarrollado por Twitter en 2010, para estandarizar las herramientas de la compañía.</h5><h5 _ngcontent-pio-c18="">El framework combina CSS y JavaScript para estilizar los elementos de una página HTML. Permite mucho más que, simplemente, cambiar el color de los botones y los enlaces.</h5><h5 _ngcontent-pio-c18="">Esta es una herramienta que proporciona interactividad en la página, por lo que ofrece una serie de componentes que facilitan la comunicación con el usuario, como menús de navegación, controles de página, barras de progreso y más</h5></div><div _ngcontent-pio-c18="" id="Centrado" class="col-md-20 text-center"><img _ngcontent-pio-c18="" src="./RetoApp_files/Bootstrap.png" id="imagen" alt="Info. BOOTSTRAP" class="img-thumbnail center-block"></div><br _ngcontent-pio-c18=""><h3 _ngcontent-pio-c18="">3. Reto Mapas (<a _ngcontent-pio-c18="" href="https://www.mapbox.com/" class="text-warning stretched-link">MapBox</a>) </h3><div _ngcontent-pio-c18="" id="lala2"><h5 _ngcontent-pio-c18="">MapBox es una webapp que nos permite diseñar y publicar mapas en múltiples medios de una manera simple y accesible. Ofrece multitud de prediseños para los mapas, asi como diferentes herramientas para personalizar el estilo de nuestros mapas y darle ese toque diferente, así como para compartirlos en web o medios sociales. Está basado en OpenStreetMap</h5></div><div _ngcontent-pio-c18="" id="Centrado" class="col-md-20 text-center"></div><br _ngcontent-pio-c18=""><h3 _ngcontent-pio-c18="">4. Reto Login Responsivo (<a _ngcontent-pio-c18="" href="https://getbootstrap.com/" class="text-warning stretched-link">Bootstrap</a>) </h3><div _ngcontent-pio-c18="" id="lala2"></div><div _ngcontent-pio-c18="" id="Centrado" class="col-md-20 text-center"></div><br _ngcontent-pio-c18=""><br _ngcontent-pio-c18=""></div></app-info><!--container--></app-root>
+<script src="./RetoApp_files/runtime.js.descarga" defer=""></script><script src="./RetoApp_files/polyfills.js.descarga" defer=""></script><script src="./RetoApp_files/styles.js.descarga" defer=""></script><script src="./RetoApp_files/scripts.js.descarga" defer=""></script><script src="./RetoApp_files/vendor.js.descarga" defer=""></script><script src="./RetoApp_files/main.js.descarga" defer=""></script>
+
+</body></html>
